@@ -1,0 +1,21 @@
+---
+# tasks file for install-tools
+
+- name: Update package cache
+  ansible.builtin.dnf5:
+    update_cache: true
+
+- name: Upgrade all packages
+  ansible.builtin.dnf5:
+    name: "*"
+    state: latest
+
+- name: Installing packages
+  package:
+    name:
+      - tmux
+      - ranger
+      - pass
+      - nmap
+      - wireshark
+    state: latest

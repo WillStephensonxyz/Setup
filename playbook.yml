@@ -1,0 +1,9 @@
+---
+- name: Workstation Setup
+  hosts: localhost
+  become: true
+
+  roles:
+    - role: "install-tools"
+    - role: "configure-bash"
+    - role: "configure-tmux"
