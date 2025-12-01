@@ -2,4 +2,4 @@ This is a simple Ansible playbook that installs a few tools and moves custom con
 
 Run
 
-ansible-playbook playbook.yml
+ansible-playbook playbook.yml --ask-become-pass
