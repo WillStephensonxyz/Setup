@@ -3,6 +3,10 @@
   hosts: localhost
   become: true
 
+  vars:
+    user_home: "/home/will"
+    user_name: "will"
+
   roles:
     - role: "install-tools"
     - role: "configure-bash"

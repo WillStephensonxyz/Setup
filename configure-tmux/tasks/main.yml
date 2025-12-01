@@ -3,6 +3,6 @@
 - name: "Configure tmux" 
   copy:
     src: "{{ role_path }}/files/.tmux.conf"
-    dest: "/home/{{ ansible_user_id }}" 
-    owner: "{{ ansible_user_id }}"
-    group: " {{ ansible_user_id }}" 
+    dest: "{{ user_home}}" 
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}" 

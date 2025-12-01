@@ -2,15 +2,18 @@
 # tasks file for install-tools
 
 - name: Update package cache
+  become: yes
   ansible.builtin.dnf5:
     update_cache: true
 
 - name: Upgrade all packages
+  become: yes
   ansible.builtin.dnf5:
     name: "*"
     state: latest
 
 - name: Installing packages
+  become: yes
   package:
     name:
       - tmux
